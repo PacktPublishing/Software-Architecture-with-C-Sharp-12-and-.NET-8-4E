@@ -1,0 +1,1 @@
+See "Designing a fast selection logic" subsection in chapter 2  

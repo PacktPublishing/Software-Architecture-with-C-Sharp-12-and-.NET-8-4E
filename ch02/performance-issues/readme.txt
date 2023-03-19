@@ -1,0 +1,1 @@
+See "Performance issues that need to be considered when programming in C#" subsection in chapter 2  
