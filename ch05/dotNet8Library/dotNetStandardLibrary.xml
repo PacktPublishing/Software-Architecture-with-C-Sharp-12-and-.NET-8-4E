@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dotNet6Library</name>
+    </assembly>
+    <members>
+        <member name="T:dotNet6Library.EvaluationService`1">
+            <summary>
+            This declaration indicates that any class that implements 
+            the interface IContentEvaluaded can be used for this
+            service. Besides, the service will be responsible to 
+            create the evaluated content
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:dotNet6Library.EvaluationService`1.content">
+            <summary>
+            The content is generic and totatly managed by the class
+            </summary>
+        </member>
+        <member name="M:dotNet6Library.EvaluationService`1.#ctor">
+            <summary>
+            The creation of the content to be evaluated will use reflection and the
+            generic definition from the class.
+            Notice that this code will work because all the classes are in the 
+            same assembly
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:dotNet6Library.EvaluationService`1.GetTypeOfEvaluation">
+            <summary>
+            This method is just used to get the type name of the generic one defined
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dotNet6Library.EvaluationService`1.CalculateEvaluationAverage">
+            <summary>
+            No matter the Evaluation, the calculation will always get values from the method CalculateGrade
+            </summary>
+            <returns>The average of the grade from Evaluations</returns>
+        </member>
+        <member name="M:dotNet6Library.Evaluations.Types.PrimeUsersEvaluation.CalculateGrade">
+            <summary>
+            The business rule implemented here indicates that grades that came from prime users have 20% of increase
+            </summary>
+            <returns>the final grade from a prime user</returns>
+        </member>
+    </members>
+</doc>

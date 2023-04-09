@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Evaluation and EvaluationService classes and IContentEvaluated Interface are stored in a class library.">
+    <Position X="4.787" Y="2.331" Height="0.608" Width="5.642" />
+  </Comment>
+  <Class Name="CodeReuseLibrary.Evaluation">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CodeReuseLibrary.EvaluationService">
+    <Position X="7.25" Y="5.5" Width="3.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="content" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="CodeReuseLibrary.IContentEvaluated">
+    <Position X="7.25" Y="3.25" Width="2" />
+    <AssociationLine Name="Evaluations" Type="CodeReuseLibrary.Evaluation">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.048" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="Evaluations" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeReuseLibrary\CodeReuseLibrary.csproj" />
+    <ProjectReference Include="..\dotNet8Library\dotNet8Library.csproj" />
+  </ItemGroup>
+
+</Project>

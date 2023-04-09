@@ -1,0 +1,2 @@
+If class diagram files (.cd) open as XML, you may need to add the Class Diagram component to your Visual Studio installation:
+https://docs.microsoft.com/en-us/visualstudio/ide/class-designer/how-to-add-class-diagrams-to-projects?view=vs-2022
