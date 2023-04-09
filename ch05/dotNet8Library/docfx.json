@@ -6,12 +6,12 @@
           "files": [
             "**.csproj"
           ],
-          "src": "C:\\book\\Software-Architecture-with-C-10-and-.NET-6-3E\\ch12\\dotNet6Library"
+          "src": "C:\\book\\Software-Architecture-with-.NET-8-4E\\ch05\\dotNet8Library"
         }
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {

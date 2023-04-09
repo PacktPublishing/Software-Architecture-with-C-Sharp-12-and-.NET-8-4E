@@ -1,9 +1,9 @@
-﻿using dotNet6Library.Evaluations;
+﻿using dotNet8Library.Evaluations;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotNet6Library
+namespace dotNet8Library
 {
     public interface IContentEvaluated
     {

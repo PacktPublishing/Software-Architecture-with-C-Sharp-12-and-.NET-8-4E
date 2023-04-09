@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotNet6Library.Evaluations.Types
+namespace dotNet8Library.Evaluations.Types
 {
     public class PrimeUsersEvaluation : Evaluation
     {

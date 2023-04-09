@@ -1,8 +1,8 @@
-﻿using dotNet6Library;
-using dotNet6Library.Evaluations;
+﻿using dotNet8Library;
+using dotNet8Library.Evaluations;
 using System.Collections.Generic;
 
-namespace dotNet6Library.Evaluations.Content
+namespace dotNet8Library.Evaluations.Content
 {
     public class Package : IContentEvaluated
     {
