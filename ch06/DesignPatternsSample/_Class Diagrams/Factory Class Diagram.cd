@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternsSample.FactorySample.ConcreteCreator.PaymentServiceFactory" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="DesignPatternsSample.FactorySample.ConcreteCreator.PaymentServiceFactory.ServicesAvailable">
+        <TypeIdentifier>
+          <NewMemberFileName>FactorySample\ConcreteCreator\PaymentServiceFactory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactorySample\ConcreteCreator\PaymentServiceFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternsSample.FactorySample.ConcreteProduct.BrazilianPaymentService" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAgBAA=</HashCode>
+      <FileName>FactorySample\ConcreteProduct\BrazilianPaymentService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OptionToCharge" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DesignPatternsSample.FactorySample.ConcreteProduct.ItalianPaymentService" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAgBAA=</HashCode>
+      <FileName>FactorySample\ConcreteProduct\ItalianPaymentService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OptionToCharge" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DesignPatternsSample.FactorySample.ProductInterface.IPaymentService">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAgBAA=</HashCode>
+      <FileName>FactorySample\ProductInterface\IPaymentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DesignPatternsSample.FactorySample.Enums.EnumChargingOptions">
+    <Position X="15" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactorySample\Enums\EnumChargingOptions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

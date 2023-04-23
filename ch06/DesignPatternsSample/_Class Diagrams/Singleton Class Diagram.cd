@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternsSample.SingletonSample.SingletonDemo">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="_instance" Type="DesignPatternsSample.SingletonSample.SingletonDemo" ManuallyRouted="true">
+      <Path>
+        <Point X="4.282" Y="4.498" />
+        <Point X="4.282" Y="5.544" />
+        <Point X="4.728" Y="5.544" />
+        <Point X="4.728" Y="4.498" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.15" Y="0.966" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAIAAEAAA=</HashCode>
+      <FileName>SingletonSample\SingletonSample.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DesignPatternsSample.SingletonSample.Configuration">
+    <Position X="7.75" Y="2" Width="2.25" />
+    <AssociationLine Name="_instance" Type="DesignPatternsSample.SingletonSample.Configuration">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.331" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAACAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SingletonSample\Configuration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
