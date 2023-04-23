@@ -1,0 +1,23 @@
+name: .NET 8 Chapter 08
+on:
+  push:
+    branches:
+    - main
+env:
+  DOTNET_CORE_VERSION: 8.0.x
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v1
+        with:
+          include-prerelease: True
+          dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
+      - name: Install dependencies
+        run: dotnet restore ./ch08
+      - name: Build
+        run: dotnet build ./ch08 --configuration Release --no-restore
+      - name: Test
+        run: dotnet test ./ch08 --no-restore --verbosity normal
