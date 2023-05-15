@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mvcdockertest:
+    image: ${DOCKER_REGISTRY-}mvcdockertest
+    build:
+      context: .
+      dockerfile: MvcDockerTest/Dockerfile
+
+  mvcdockertest1:
+    image: ${DOCKER_REGISTRY-}mvcdockertest1
+    build:
+      context: .
+      dockerfile: MvcDockerTest1/Dockerfile
+
