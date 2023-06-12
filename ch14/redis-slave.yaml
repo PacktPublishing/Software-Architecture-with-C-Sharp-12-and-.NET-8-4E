@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: slave
-        image: gcr.io/google_samples/gb-redisslave:v1
+        image: gcr.io/google_samples/gb-redis-follower:v2
         resources:
           requests:
             cpu: 100m
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-slave
+  name: redis-follower
   labels:
     app: redis
     role: slave
