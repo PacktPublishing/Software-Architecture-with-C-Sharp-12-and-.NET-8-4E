@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcMicroService";
+
+import "google/protobuf/timestamp.proto"; 
+
+package counting;
+
+service Counter {
+  // Accepts a conting request
+  rpc Count (CountingRequest) returns (CountingReply);
+}
+
+message CountingRequest {
+  string id = 1;
+  google.protobuf.Timestamp time = 2;
+  string location = 3;
+  sint32 cost =4; 
+  google.protobuf.Timestamp purchaseTime = 5;
+}
+
+message CountingReply {
+  
+}
+
