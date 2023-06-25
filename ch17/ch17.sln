@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31606.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppSample", "FunctionAppSample\FunctionAppSample.csproj", "{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppWWTravel", "FunctionAppWWTravel\FunctionAppWWTravel.csproj", "{628319E8-C36C-4912-B422-5C53DBA0486B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628319E8-C36C-4912-B422-5C53DBA0486B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628319E8-C36C-4912-B422-5C53DBA0486B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628319E8-C36C-4912-B422-5C53DBA0486B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628319E8-C36C-4912-B422-5C53DBA0486B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {147327B6-E243-4A12-96DF-61C1B030A877}
+	EndGlobalSection
+EndGlobal

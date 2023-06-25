@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "FunctionAppWWTravel": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SmtpServer": "[Your SMTP Server]",
+        "SmtpPort": "[Your SMTP Server Port]",
+        "SmtpUser": "[The user who sends the e-mail]",
+        "SmtpPassword": "[The user password]",
+        "SmtpDomain": "[The SMTP Server Domain]",
+        "EmailQueueConnectionString": "[Your Queue Storage Account Connection String Here]"
+      }
+    }
+  }
+}
