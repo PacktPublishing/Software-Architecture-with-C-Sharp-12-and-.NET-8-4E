@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcMicroService";
+
+import "google/protobuf/timestamp.proto"; 
+
+package purchase;
+
+
+
+message PurchaseMessage {
+  string id = 1;
+  google.protobuf.Timestamp time = 2;
+  string location = 3;
+  int32 cost =4; 
+  google.protobuf.Timestamp purchaseTime = 5;
+}
+
+
+
