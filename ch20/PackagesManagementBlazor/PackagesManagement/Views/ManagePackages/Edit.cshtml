@@ -1,0 +1,80 @@
+﻿
+@model PackagesManagement.Models.Packages.PackageFullEditViewModel
+@inject PackagesManagement.Queries.IDestinationListQuery destinationsQuery
+@{
+    ViewData["Title"] = "Edit/Create package";
+    var allDestinations = await destinationsQuery.AllDestinations();
+}
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+            <section>
+                <form method="post">
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    @if (Model == null)
+                    {
+                        <input type="hidden" asp-for="Id" value="0" />
+                    }
+                    else
+                    {
+                        <input type="hidden" asp-for="Id"  />
+                    }
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="DestinationId"></label>
+                            <select asp-for="DestinationId" asp-items="allDestinations" class="form-control">
+                                <option value="">select destination</option>
+                            </select>
+                            <span asp-validation-for="DestinationId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label asp-for="DurationInDays"></label>
+                            <input type="number" asp-for="DurationInDays" class="form-control" />
+                            <span asp-validation-for="DurationInDays" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="Price"></label>
+                            <input type="number"  asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label asp-for="StartValidityDate"></label>
+                            <input type="date" asp-for="StartValidityDate" class="form-control" />
+                            <span asp-validation-for="StartValidityDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="EndValidityDate"></label>
+                            <input type="date"  asp-for="EndValidityDate" class="form-control" />
+                            <span asp-validation-for="EndValidityDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label asp-for="Description"></label>
+                            <textarea rows="4" asp-for="Description" class="form-control" >
+                            </textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>              
+            </section>  
+        </div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
