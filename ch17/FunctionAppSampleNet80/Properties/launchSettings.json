@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "FunctionAppSampleNet80": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7210",
+      "launchBrowser": false
+    }
+  }
+}
