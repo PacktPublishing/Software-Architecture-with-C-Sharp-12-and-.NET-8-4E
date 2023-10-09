@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>dotnet-FakeSource-9AB68606-5210-45F5-AB92-9FCAD18967C9</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileRunArguments>--rm --net test-net --name fakesource</DockerfileRunArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.24.0-rc2" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.55.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.56.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.6.23329.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.3" />
+    <PackageReference Include="Polly" Version="8.0.0-alpha.6" />
+ 
+    <Folder Include="Protos\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		
+	</ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\GrpcMicroService\Protos\counting.proto" GrpcServices="Client">
+      <Link>Protos\counting.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+</Project>

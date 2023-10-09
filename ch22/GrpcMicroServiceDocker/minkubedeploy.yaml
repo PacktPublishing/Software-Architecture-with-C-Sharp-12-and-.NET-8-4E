@@ -1,0 +1,78 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: grpcmicroservice
+  labels:
+    app: statistics
+spec:
+  selector:
+    matchLabels:
+      app: statistics
+      role: worker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: statistics
+        role: worker
+    spec:
+      containers:
+      - name: grpcmicroservice
+        image: grpcmicroservice:latest
+        imagePullPolicy: Never
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
+        env:
+        - name: ASPNETCORE_HTTP_PORTS
+          value: "8080"
+        ports:
+        - containerPort: 8080
+          name: http
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpcmicroservice
+  labels:
+    app: contract
+    role: worker
+spec:
+  ports:
+  - port: 8080
+    name: http
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: statistics
+    role: worker
+
+---
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: fakesource
+  labels:
+    app: sale
+spec:
+  selector:
+    matchLabels:
+      app: sales
+      role: source
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sales
+        role: source
+    spec:
+      containers:
+      - name: fakesource
+        image: fakesource:latest
+        imagePullPolicy: Never
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
