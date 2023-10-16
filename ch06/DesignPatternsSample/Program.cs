@@ -5,6 +5,7 @@ using DesignPatternsSample.CommandSample.Receiver;
 using DesignPatternsSample.DependencyInjectionSample.Concrete;
 using DesignPatternsSample.FactorySample.ConcreteCreator;
 using DesignPatternsSample.FactorySample.Enums;
+using DesignPatternsSample.FactorySample.ProductInterface;
 using DesignPatternsSample.ProxySample.Proxy;
 using DesignPatternsSample.ProxySample.Subject;
 using DesignPatternsSample.SingletonSample;
@@ -27,16 +28,27 @@ namespace DesignPatternsSample
             familyRoom.Describe();
             #endregion
 
-            #region Factory Sample
+            #region Factory Sample 
 
-            ProcessCharging(PaymentServiceFactory.ServicesAvailable.Brazilian,
-                "gabriel@sample.com", 178.90m, EnumChargingOptions.CreditCard);
+            // In this sample, we will use the Factory Method Pattern  
+            // to create a Payment Service to charge a Brazilian 
+            // customer 
+            ProcessCharging(
+                PaymentServiceFactory.ServicesAvailable.Brazilian,
+                "gabriel@sample.com",
+                178.90m,
+                EnumChargingOptions.CreditCard);
 
-            ProcessCharging(PaymentServiceFactory.ServicesAvailable.Italian,
-                "francesco@sample.com", 188.70m, EnumChargingOptions.DebitCard);
+            // In this sample, we will use the Factory Method Pattern 
+            // to create a Payment Service to charge an Italian 
+            // customer 
+            ProcessCharging(
+                PaymentServiceFactory.ServicesAvailable.Italian,
+                "francesco@sample.com",
+                188.70m,
+                EnumChargingOptions.DebitCard);
 
             #endregion
-
             #region Singleton Sample
             Console.WriteLine("Singleton Sample");
             SingletonDemo.Current.Message = "This text will be printed by " +
@@ -139,7 +151,7 @@ namespace DesignPatternsSample
             string emailToCharge, decimal moneyToCharge, EnumChargingOptions optionToCharge)
         {
             PaymentServiceFactory factory = new PaymentServiceFactory();
-            var service = factory.Create(serviceToCharge);
+            IPaymentService service = factory.Create(serviceToCharge);
             service.EmailToCharge = emailToCharge;
             service.MoneyToCharge = moneyToCharge;
             service.OptionToCharge = optionToCharge;
