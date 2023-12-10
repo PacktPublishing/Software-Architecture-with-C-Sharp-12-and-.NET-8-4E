@@ -70,7 +70,7 @@ public class Worker : BackgroundService
                                 channel.ConfirmSelect();
                             }
 
-                            channel.QueueDeclare(queue: "purchase_queue",
+                            channel.QueueDeclare(queue: "purchase_queueb",
                                 durable: true,
                                 exclusive: false,
                                 autoDelete: false,
@@ -78,7 +78,7 @@ public class Worker : BackgroundService
                             var properties = channel.CreateBasicProperties();
                             properties.Persistent = true;
                             channel.BasicPublish(exchange: "",
-                                 routingKey: "purchase_queue",
+                                 routingKey: "purchase_queueb",
                                  basicProperties: properties,
                                  body: body);
 
