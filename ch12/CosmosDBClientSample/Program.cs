@@ -1,7 +1,8 @@
 ﻿using Microsoft.Azure.Cosmos;
-using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace CosmosDBClientSample
 {
@@ -79,7 +80,7 @@ namespace CosmosDBClientSample
 
     public class Destination
     {
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         public string DestinationName { get; set; }
@@ -91,7 +92,7 @@ namespace CosmosDBClientSample
 
     public class Package
     {
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName ("id")]
         public string Id { get; set; }
 
         public string Name { get; set; }
