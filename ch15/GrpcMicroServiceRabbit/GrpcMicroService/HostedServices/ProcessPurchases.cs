@@ -30,7 +30,7 @@ public class ProcessPurchases : BackgroundService
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "purchase_queue",
+                    channel.QueueDeclare(queue: "purchase_queueb",
                                          durable: true,
                                          exclusive: false,
                                          autoDelete: false,
@@ -77,7 +77,7 @@ public class ProcessPurchases : BackgroundService
                         }
                     };
                    
-                    channel.BasicConsume(queue: "purchase_queue",
+                    channel.BasicConsume(queue: "purchase_queueb",
                                 autoAck: false,
                                 consumer: consumer);
                     await Task.Delay(1000, stoppingToken);
