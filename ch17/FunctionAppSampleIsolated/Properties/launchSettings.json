@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "FunctionAppSampleNet80": {
+    "FunctionAppSampleIsolated": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7210",
+      "commandLineArgs": "--port 7295",
       "launchBrowser": false
     }
   }

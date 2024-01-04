@@ -2,13 +2,28 @@
   <PropertyGroup>
 	  <TargetFramework>net8.0</TargetFramework>
 	  <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+	  <OutputType>Exe</OutputType>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <UserSecretsId>90ca6a3c-6d3e-4ce8-a5d4-864b87a03567</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="ProcessSendEmail.cs" />
+    <Compile Remove="Properties\ServiceDependencies\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\**" />
+    <None Remove="Properties\ServiceDependencies\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.1.3" />
-	  <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
+	  <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+	  <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.20.0" />
+	  <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.1.0" />
+	  <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Queues" Version="5.2.0" />
+	  <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.16.4" />
+	  <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.1.0" />
+	  <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.22.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -19,7 +34,7 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\ServiceDependencies\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Using Include="System.Threading.ExecutionContext" Alias="ExecutionContext" />
+	</ItemGroup>
 </Project>

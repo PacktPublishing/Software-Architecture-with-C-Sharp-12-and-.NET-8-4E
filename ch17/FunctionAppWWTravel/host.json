@@ -1,3 +1,17 @@
 {
-    "version": "2.0"
+  "version": "2.0",
+  "extensions": {
+    "queues": {
+      "messageEncoding": "base64" // or "none"
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      },
+      "enableLiveMetricsFilters": true
+    }
+  }
 }

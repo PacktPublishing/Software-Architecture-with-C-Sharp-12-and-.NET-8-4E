@@ -1,26 +1,31 @@
 using System;
 using System.Net;
 using System.Net.Mail;
-using System.Text.Json;
 using FunctionAppWWTravel.Entities;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 
 namespace FunctionAppWWTravel
 {
-    public static class ProcessEmailQueue
+    public class ProcessEmailQueue
     {
-        [FunctionName("ProcessEmailQueue")]
-        public static void Run([QueueTrigger("email", Connection = "EmailQueueConnectionString")] string myQueueItem, ILogger log)
+
+        private readonly ILogger _logger;
+
+        public ProcessEmailQueue(ILoggerFactory loggerFactory)
         {
-            SendEmail(myQueueItem);
-            log.LogInformation($"Success sending data: {myQueueItem}");
+            _logger = loggerFactory.CreateLogger<ProcessEmailQueue>();
         }
-        private static void SendEmail(string data)
+
+        [Function("ProcessEmailQueue")]
+        public void Run([QueueTrigger("email", Connection = "EmailQueueConnectionString")] EMailData mail, FunctionContext context)
+        {
+            SendEmail(mail);
+            _logger.LogInformation($"Success sending data: {mail}");
+        }
+        private void SendEmail(EMailData email)
         {
             Helper helper = new Helper();
-            EMailData email = JsonSerializer.Deserialize<EMailData>(data);
             using (MailMessage mailMessage = new MailMessage())
             {
                 using (SmtpClient smtp = new SmtpClient(helper.SmtpServer))
@@ -34,10 +39,13 @@ namespace FunctionAppWWTravel
                     smtp.Credentials = smtpUserInfo;
                     mailMessage.DeliveryNotificationOptions = DeliveryNotificationOptions.None;
                     mailMessage.From = new MailAddress(helper.SmtpUser);
-                    mailMessage.To.Add(email.To);
-                    mailMessage.Subject = email.Subject;
-                    mailMessage.Body = email.Body;
-                    smtp.Send(mailMessage);
+                    if (!String.IsNullOrEmpty(email.To))
+                    {
+                        mailMessage.To.Add(email.To);
+                        mailMessage.Subject = email.Subject;
+                        mailMessage.Body = email.Body;
+                        smtp.Send(mailMessage);
+                    }
                 }
             }
         }

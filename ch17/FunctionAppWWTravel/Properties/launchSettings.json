@@ -2,13 +2,15 @@
   "profiles": {
     "FunctionAppWWTravel": {
       "commandName": "Project",
+      "commandLineArgs": "--port 7295",
+      "launchBrowser": false,
       "environmentVariables": {
-        "SmtpServer": "[Your SMTP Server]",
-        "SmtpPort": "[Your SMTP Server Port]",
-        "SmtpUser": "[The user who sends the e-mail]",
-        "SmtpPassword": "[The user password]",
-        "SmtpDomain": "[The SMTP Server Domain]",
-        "EmailQueueConnectionString": "[Your Queue Storage Account Connection String Here]"
+        "SmtpServer": "[YOUR SMTP SERVER ADDRESS HERE]",
+        "SmtpPort": "[YOUR SMTP SERVER PORT HERE]",
+        "SmtpUser": "[YOUR SMTP USER HERE]",
+        "SmtpPassword": "[YOUR SMTP USER PASSWORD HERE]",
+        "SmtpDomain": "[YOUR SMTP USER DOMAIN HERE]",
+        "EmailQueueConnectionString": "[YOUR STORAGE CONNECTION STRING HERE]"
       }
     }
   }

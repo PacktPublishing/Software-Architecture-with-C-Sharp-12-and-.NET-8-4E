@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31606.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppSample", "FunctionAppSample\FunctionAppSample.csproj", "{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppWWTravel", "FunctionAppWWTravel\FunctionAppWWTravel.csproj", "{A305000E-39C2-4DAC-85C6-A88A1B3E90C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppSampleNet80", "FunctionAppSampleNet80\FunctionAppSampleNet80.csproj", "{EF1B14D4-1D35-462A-A889-02C3DCF3AD3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppSampleIsolated", "FunctionAppSampleIsolated\FunctionAppSampleIsolated.csproj", "{D21F1FD5-807B-4730-BDBB-847CE7D895E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF089CC5-5882-4C6B-BD42-D9F1B6E3F789}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A305000E-39C2-4DAC-85C6-A88A1B3E90C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A305000E-39C2-4DAC-85C6-A88A1B3E90C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A305000E-39C2-4DAC-85C6-A88A1B3E90C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A305000E-39C2-4DAC-85C6-A88A1B3E90C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF1B14D4-1D35-462A-A889-02C3DCF3AD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF1B14D4-1D35-462A-A889-02C3DCF3AD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF1B14D4-1D35-462A-A889-02C3DCF3AD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF1B14D4-1D35-462A-A889-02C3DCF3AD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21F1FD5-807B-4730-BDBB-847CE7D895E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21F1FD5-807B-4730-BDBB-847CE7D895E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21F1FD5-807B-4730-BDBB-847CE7D895E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21F1FD5-807B-4730-BDBB-847CE7D895E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
