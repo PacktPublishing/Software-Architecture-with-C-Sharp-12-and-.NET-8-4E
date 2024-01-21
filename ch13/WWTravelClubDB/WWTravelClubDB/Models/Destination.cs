@@ -10,10 +10,10 @@ namespace WWTravelClubDB.Models
     {
         public int Id { get; set; }
         [MaxLength(128)]
-        public string Name { get; set; }
+        public required string Name { get; set; }
         [MaxLength(128)]
-        public string Country { get; set; }
+        public required string Country { get; set; }
         public string? Description { get; set; }
-        public ICollection<Package> Packages { get; set; }
+        public ICollection<Package> Packages { get; set; } = null!;
     }
 }
