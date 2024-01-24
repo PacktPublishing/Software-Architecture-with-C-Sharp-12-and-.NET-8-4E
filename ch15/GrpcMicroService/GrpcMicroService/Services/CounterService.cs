@@ -9,6 +9,7 @@ public class CounterService: Counter.CounterBase
     private readonly IMessageQueue queue;
     public CounterService(IMessageQueue queue)
     {
+        if(queue == null) throw new ArgumentNullException(nameof(queue));
         this.queue = queue;
     }
     public override async  Task<CountingReply> Count(CountingRequest request, 
