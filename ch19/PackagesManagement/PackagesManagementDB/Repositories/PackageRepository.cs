@@ -21,12 +21,12 @@ namespace PackagesManagementDB.Repositories
         }
         public IUnitOfWork UnitOfWork => context;
 
-        public async Task<IPackage> GetAsync(int id)
+        public async Task<IPackage?> GetAsync(int id)
         {
             return await context.Packages.Where(m => m.Id == id)
                 .FirstOrDefaultAsync();
         }
-        public async Task<IPackage> Delete(int id)
+        public async Task<IPackage?> Delete(int id)
         {
             var model = await GetAsync(id);
             if (model is not Package package) return null;
