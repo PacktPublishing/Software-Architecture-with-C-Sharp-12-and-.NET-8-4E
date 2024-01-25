@@ -21,7 +21,7 @@ namespace PackagesManagementDB.Repositories
         }
         public IUnitOfWork UnitOfWork => context;
 
-        public async Task<IDestination> Get(int id)
+        public async Task<IDestination?> GetAsync(int id)
         {
             return await context.Destinations.Where(m => m.Id == id)
                 .FirstOrDefaultAsync();

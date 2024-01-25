@@ -9,8 +9,8 @@ namespace PackagesManagementDomain.IRepositories
 {
     public interface IPackageRepository: IRepository<IPackage>
     {
-        Task<IPackage> Get(int id);
+        Task<IPackage?> GetAsync(int id);
         IPackage New();
-        Task<IPackage> Delete(int id);
+        Task<IPackage?> Delete(int id);
     }
 }
