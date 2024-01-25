@@ -20,7 +20,7 @@ namespace PackagesManagementDB.Repositories
         }
         public IUnitOfWork UnitOfWork => context;
 
-        public async Task<IEnumerable<IPackageEvent>> GetFirstN(int n)
+        public async Task<IEnumerable<IPackageEvent>> GetFirstNAsync(int n)
         {
             return await context.PackageEvents
                 .OrderBy(m => m.Id)

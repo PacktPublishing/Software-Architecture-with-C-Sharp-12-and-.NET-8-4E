@@ -8,13 +8,9 @@ using PackagesManagementDB;
 
 namespace PackagesManagement.Queries
 {
-    public class DestinationListQuery : IDestinationListQuery
+    public class DestinationListQuery(MainDbContext ctx) : IDestinationListQuery
     {
-        private readonly MainDbContext ctx;
-        public DestinationListQuery(MainDbContext ctx)
-        {
-            this.ctx = ctx;
-        }
+        
         public async Task<IEnumerable<SelectListItem>> AllDestinations()
         {
             return (await ctx.Destinations.Select(m => new

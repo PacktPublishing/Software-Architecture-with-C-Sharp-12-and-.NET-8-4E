@@ -13,14 +13,14 @@ namespace PackagesManagementDB.Models
     {
         
         [MaxLength(128)]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         [MaxLength(128)]
         public string? Description { get; set; }
         public decimal Price { get; set; }
         public int DurationInDays { get; set; }
         public DateTime? StartValidityDate { get; set; }
         public DateTime? EndValidityDate { get; set; }
-        public Destination MyDestination { get; set; }
+        public Destination MyDestination { get; set; } = null!;
         [ConcurrencyCheck]
         public long EntityVersion { get; set; }
 

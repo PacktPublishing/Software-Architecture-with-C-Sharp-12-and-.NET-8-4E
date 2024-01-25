@@ -11,15 +11,9 @@ using System.Threading.Tasks;
 
 namespace PackagesManagement.Handlers
 {
-    public class UpdatePackageCommandHandler : ICommandHandler<UpdatePackageCommand>
+    public class UpdatePackageCommandHandler(IPackageRepository repo, IEventMediator mediator) : ICommandHandler<UpdatePackageCommand>
     {
-        private readonly IPackageRepository repo;
-        private readonly IEventMediator mediator;
-        public UpdatePackageCommandHandler(IPackageRepository repo, IEventMediator mediator)
-        {
-            this.repo = repo;
-            this.mediator = mediator;
-        }
+        
         public async Task HandleAsync(UpdatePackageCommand command)
         {
             bool done = false;
@@ -28,7 +22,7 @@ namespace PackagesManagement.Handlers
             {
                 try
                 {
-                    model = await repo.Get(command.Updates.Id);
+                    model = await repo.GetAsync(command.Updates.Id);
                     if (model == null) return;
                     model.FullUpdate(command.Updates);
                     await mediator.TriggerEvents(model.DomainEvents);

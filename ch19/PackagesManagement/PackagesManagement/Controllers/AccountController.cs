@@ -12,21 +12,11 @@ using PackagesManagement.Models.Account;
 
 namespace PackagesManagement.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController(
+            UserManager<IdentityUser<int>> _userManager,
+            SignInManager<IdentityUser<int>> _signInManager) : Controller
     {
-        private readonly UserManager<IdentityUser<int>> _userManager;
-        private readonly SignInManager<IdentityUser<int>> _signInManager;
-
-        public AccountController(
-            UserManager<IdentityUser<int>> userManager,
-            SignInManager<IdentityUser<int>> signInManager)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-
-
-
-        }
+        
         [HttpGet]
         public async Task<IActionResult> Login(string? returnUrl = null)
         {

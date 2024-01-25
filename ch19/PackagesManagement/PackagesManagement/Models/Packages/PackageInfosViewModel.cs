@@ -9,12 +9,12 @@ namespace PackagesManagement.Models.Packages
     public class PackageInfosViewModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         public decimal Price { get; set; }
         public int DurationInDays { get; set; }
         public DateTime? StartValidityDate { get; set; }
         public DateTime? EndValidityDate { get; set; }
-        public string DestinationName { get; set; }
+        public string DestinationName { get; set; } = null!;
         public int DestinationId { get; set; }
         public override string ToString()
         {

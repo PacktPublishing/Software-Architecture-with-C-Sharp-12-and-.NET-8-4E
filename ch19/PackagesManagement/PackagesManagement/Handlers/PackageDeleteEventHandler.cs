@@ -9,14 +9,10 @@ using PackagesManagementDomain.Aggregates;
 
 namespace PackagesManagement.Handlers
 {
-    public class PackageDeleteEventHandler :
+    public class PackageDeleteEventHandler(IPackageEventRepository repo) :
         IEventHandler<PackageDeleteEvent>
     {
-        private readonly IPackageEventRepository repo;
-        public PackageDeleteEventHandler(IPackageEventRepository repo)
-        {
-            this.repo = repo;
-        }
+        
         public Task HandleAsync(PackageDeleteEvent ev)
         {
             repo.New(PackageEventType.Deleted, ev.PackageId, ev.OldVersion);

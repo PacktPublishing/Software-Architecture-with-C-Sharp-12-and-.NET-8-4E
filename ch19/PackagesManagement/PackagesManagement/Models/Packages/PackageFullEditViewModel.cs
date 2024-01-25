@@ -25,10 +25,10 @@ namespace PackagesManagement.Models.Packages
         public int Id { get; set; }
         [StringLength(128, MinimumLength = 5), Required]
         [Display(Name = "name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         [Display(Name = "package infos")]
         [StringLength(128, MinimumLength = 10), Required]
-        public string Description { get; set; }
+        public string Description { get; set; } = null!;
         [Display(Name = "price")]
         [Range(0, 100000)]
         public decimal Price { get; set; }

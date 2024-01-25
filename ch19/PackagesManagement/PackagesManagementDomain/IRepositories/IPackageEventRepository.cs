@@ -9,7 +9,7 @@ namespace PackagesManagementDomain.IRepositories
 {
     public interface IPackageEventRepository:IRepository<IPackageEvent>
     {
-        Task<IEnumerable<IPackageEvent>> GetFirstN(int n);
+        Task<IEnumerable<IPackageEvent>> GetFirstNAsync(int n);
         IPackageEvent New(PackageEventType type, int id, long oldVersion, long? newVersion= null, decimal price = 0);
     }
 }

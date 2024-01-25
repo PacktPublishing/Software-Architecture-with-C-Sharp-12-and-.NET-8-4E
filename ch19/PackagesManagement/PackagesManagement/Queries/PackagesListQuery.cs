@@ -8,13 +8,9 @@ using System.Threading.Tasks;
 
 namespace PackagesManagement.Queries
 {
-    public class PackagesListQuery:IPackagesListQuery
+    public class PackagesListQuery(MainDbContext ctx) : IPackagesListQuery
     {
-        private readonly MainDbContext ctx;
-        public PackagesListQuery(MainDbContext ctx)
-        {
-            this.ctx = ctx;
-        }
+        
         public async Task<IEnumerable<PackageInfosViewModel>> GetAllPackages()
         {
             return await ctx.Packages.Select(m => new PackageInfosViewModel

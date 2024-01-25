@@ -9,15 +9,9 @@ using System.Threading.Tasks;
 
 namespace PackagesManagement.Handlers
 {
-    public class DeletePackageCommandHandler : ICommandHandler<DeletePackageCommand>
+    public class DeletePackageCommandHandler(IPackageRepository repo, IEventMediator mediator) : ICommandHandler<DeletePackageCommand>
     {
-        IPackageRepository repo;
-        IEventMediator mediator;
-        public DeletePackageCommandHandler(IPackageRepository repo, IEventMediator mediator)
-        {
-            this.repo = repo;
-            this.mediator = mediator;
-        }
+        
         public async Task HandleAsync(DeletePackageCommand command)
         {
             var deleted = await repo.Delete(command.PackageId);

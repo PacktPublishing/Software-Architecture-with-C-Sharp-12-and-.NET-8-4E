@@ -49,7 +49,7 @@ namespace PackagesManagement.Controllers
         {
             if (id == 0) return RedirectToAction(
                 nameof(ManagePackagesController.Index));
-            var aggregate = await repo.Get(id);
+            var aggregate = await repo.GetAsync(id);
             if (aggregate == null) return RedirectToAction(
                 nameof(ManagePackagesController.Index));
             var vm = new PackageFullEditViewModel(aggregate);

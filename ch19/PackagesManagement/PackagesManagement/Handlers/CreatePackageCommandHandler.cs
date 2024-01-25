@@ -8,13 +8,9 @@ using System.Threading.Tasks;
 
 namespace PackagesManagement.Handlers
 {
-    public class CreatePackageCommandHandler : ICommandHandler<CreatePackageCommand>
+    public class CreatePackageCommandHandler(IPackageRepository repo) : ICommandHandler<CreatePackageCommand>
     {
-        IPackageRepository repo;
-        public CreatePackageCommandHandler(IPackageRepository repo)
-        {
-            this.repo = repo;
-        }
+        
         public async Task  HandleAsync(CreatePackageCommand command)
         {
             var model= repo.New();

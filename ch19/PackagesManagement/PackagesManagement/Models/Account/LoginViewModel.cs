@@ -10,12 +10,12 @@ namespace PackagesManagement.Models.Account
     {
         [Required]
         [Display(Name = "user name")]
-        public string UserName { get; set; }
+        public string UserName { get; set; } = null!;
 
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "password")]
-        public string Password { get; set; }
+        public string Password { get; set; } = null!;
 
         [Display(Name = "remember me")]
         public bool RememberMe { get; set; }
