@@ -4,7 +4,7 @@ namespace PackagesManagementBlazor.Shared
 {
     public class PackagesListViewModel
     {
-        public IEnumerable<PackageInfosViewModel> 
+        public required IReadOnlyCollection<PackageInfosViewModel> 
             Items { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace PackagesManagementBlazor.Client.Services
         {
             this.client = client;
         }
-        public async Task<IEnumerable<PackageInfosViewModel>> GetByLocation(string location)
+        public async Task<IEnumerable<PackageInfosViewModel>> GetByLocationAsync(string location)
         {
             var result =
                 await client.GetFromJsonAsync<PackagesListViewModel>

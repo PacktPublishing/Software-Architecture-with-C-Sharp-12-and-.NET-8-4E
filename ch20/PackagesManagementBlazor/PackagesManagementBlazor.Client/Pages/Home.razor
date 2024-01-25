@@ -81,7 +81,7 @@ else if (loading)
         packages = null;
         loading = true;
         await InvokeAsync(StateHasChanged);
-        packages = await client.GetByLocation(search.Location);
+        packages = await client.GetByLocationAsync(search.Location);
         loading = false;
 
     }

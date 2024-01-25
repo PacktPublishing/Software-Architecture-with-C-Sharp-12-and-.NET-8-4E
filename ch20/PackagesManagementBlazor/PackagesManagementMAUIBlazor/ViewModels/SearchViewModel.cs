@@ -5,6 +5,6 @@ namespace PackagesManagementMAUIBlazor.ViewModels
     public class SearchViewModel
     {
         [Required]
-        public string Location { get; set; }
+        public string? Location { get; set; }
     }
 }
