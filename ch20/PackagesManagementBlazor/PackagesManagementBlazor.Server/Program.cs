@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbLayer(builder.Configuration
-                .GetConnectionString("DefaultConnection"),
+                .GetConnectionString("DefaultConnection")??string.Empty,
                 "PackagesManagementDB");
 builder.Services.AddAllQueries(typeof(ICommand).Assembly);
 builder.Services.AddCors(o => {

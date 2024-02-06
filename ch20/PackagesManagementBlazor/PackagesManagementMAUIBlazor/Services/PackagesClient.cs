@@ -20,7 +20,7 @@ namespace PackagesManagementMAUIBlazor.Services
             var result =
                 await client.GetFromJsonAsync<PackagesListViewModel>
                     ("Packages/" + Uri.EscapeDataString(location));
-            return result.Items;
+            return result == null ? new List<PackageInfosViewModel>() : result.Items;
         }
     }
 }

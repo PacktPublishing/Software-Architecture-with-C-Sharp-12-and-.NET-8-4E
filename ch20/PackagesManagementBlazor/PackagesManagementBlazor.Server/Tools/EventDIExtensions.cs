@@ -17,7 +17,7 @@ namespace DDD.ApplicationLayer
             where H : class, IEventHandler<T>
         {
             service.AddScoped<H>();
-            List<Type> list = null;
+            List<Type>? list = null!;
             eventDictionary.TryGetValue(typeof(T), out list);
             if (list == null)
             {

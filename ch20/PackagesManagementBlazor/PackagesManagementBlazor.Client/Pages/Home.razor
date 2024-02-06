@@ -74,14 +74,14 @@ else if (loading)
 }
 @code {
     SearchViewModel search { get; set; } = new SearchViewModel();
-    private IEnumerable<PackageInfosViewModel> packages;
+    private IEnumerable<PackageInfosViewModel>? packages;
     bool loading;
     async Task Search()
     {
         packages = null;
         loading = true;
         await InvokeAsync(StateHasChanged);
-        packages = await client.GetByLocationAsync(search.Location);
+        packages = await client.GetByLocationAsync(search?.Location??string.Empty);
         loading = false;
 
     }

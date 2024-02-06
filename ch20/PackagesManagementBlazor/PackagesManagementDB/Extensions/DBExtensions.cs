@@ -43,7 +43,7 @@ namespace PackagesManagementDB.Extensions
                 {
                     string user = "Admin";
                     string password = "_Admin_pwd1";
-                    IdentityUser<int> currUser = null;
+                    IdentityUser<int> currUser ;
                     var result = await userManager.CreateAsync(currUser = new IdentityUser<int> { UserName = user, Email = "admin@fakedomain.com", EmailConfirmed = true }, password);
 
                     await userManager.AddToRoleAsync(currUser, "Admins");

@@ -10,7 +10,7 @@ namespace PackagesManagementDomain.Aggregates
         void FullUpdate(IDestination o);
         string Name { get; }
         string Country { get;}
-        string Description { get;}
+        string? Description { get;}
         
     }
 }

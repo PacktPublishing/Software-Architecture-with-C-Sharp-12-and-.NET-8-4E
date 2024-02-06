@@ -7,8 +7,8 @@ namespace DDD.DomainLayer
     public abstract class Entity<K>: IEntity<K>
         where K: IEquatable<K>
     {
-        
-        public virtual K Id { get; protected set; }
+
+        public virtual K Id { get; protected set; } 
         public bool IsTransient()
         {
             return Object.Equals(Id, default(K));
@@ -53,7 +53,7 @@ namespace DDD.DomainLayer
             return !(left == right);
         }
         [NotMapped]
-        public List<IEventNotification> DomainEvents { get; private set; }
+        public List<IEventNotification> DomainEvents { get; private set; } = null!;
         public void AddDomainEvent(IEventNotification evt)
         {
             DomainEvents ??= new List<IEventNotification>();
