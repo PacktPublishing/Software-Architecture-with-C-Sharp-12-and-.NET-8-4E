@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using DDD.DomainLayer;
 using Microsoft.Extensions.DependencyInjection;
-
+#nullable disable
 namespace DDD.ApplicationLayer
 {
     public static class EventDIExtensions
@@ -17,7 +17,7 @@ namespace DDD.ApplicationLayer
             where H : class, IEventHandler<T>
         {
             service.AddScoped<H>();
-            List<Type>? list = null!;
+            List<Type> list = null!;
             eventDictionary.TryGetValue(typeof(T), out list);
             if (list == null)
             {
