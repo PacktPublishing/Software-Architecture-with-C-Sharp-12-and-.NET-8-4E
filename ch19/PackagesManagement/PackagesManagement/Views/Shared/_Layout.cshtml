@@ -21,7 +21,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated)
+                        @if (User?.Identity?.IsAuthenticated??false)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-controller="ManagePackages" asp-action="Index">Manage packages</a>
@@ -53,7 +53,7 @@
             @RenderBody()
         </main>
     </div>
-    @if (User.Identity.IsAuthenticated)
+    @if (User?.Identity?.IsAuthenticated??false)
     {
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" ></form>
     }

@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbLayer(builder.Configuration.GetConnectionString("DefaultConnection"),
+builder.Services.AddDbLayer(builder.Configuration?.GetConnectionString("DefaultConnection")??string.Empty,
     "PackagesManagementDB");
 
 builder.Services.AddAllQueries(typeof(ManagePackagesController).Assembly);

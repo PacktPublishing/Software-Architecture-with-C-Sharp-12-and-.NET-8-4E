@@ -35,7 +35,7 @@ namespace PackagesManagement.Controllers
            string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-            if (User.Identity.IsAuthenticated)
+            if (User?.Identity?.IsAuthenticated??false)
             {
                 await HttpContext.SignOutAsync();
             }

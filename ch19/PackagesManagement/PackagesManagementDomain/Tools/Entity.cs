@@ -53,7 +53,7 @@ namespace DDD.DomainLayer
             return !(left == right);
         }
         [NotMapped]
-        public List<IEventNotification> DomainEvents { get; private set; }
+        public List<IEventNotification> DomainEvents { get; private set; } = null!;
         public void AddDomainEvent(IEventNotification evt)
         {
             DomainEvents ??= new List<IEventNotification>();

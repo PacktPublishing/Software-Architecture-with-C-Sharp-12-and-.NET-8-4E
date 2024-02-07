@@ -17,7 +17,7 @@ namespace PackagesManagement.Handlers
         public async Task HandleAsync(UpdatePackageCommand command)
         {
             bool done = false;
-            IPackage model;
+            IPackage? model;
             while (!done)
             {
                 try

@@ -16,7 +16,7 @@ namespace PackagesManagement.Models.Packages
             Id = o.Id;
             DestinationId = o.DestinationId;
             Name = o.Name;
-            Description = o.Description;
+            Description = o.Description??null!;
             Price = o.Price;
             DurationInDays = o.DurationInDays;
             StartValidityDate = o.StartValidityDate;

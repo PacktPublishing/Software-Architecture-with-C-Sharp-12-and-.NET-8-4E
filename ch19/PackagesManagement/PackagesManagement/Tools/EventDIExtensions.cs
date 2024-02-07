@@ -5,7 +5,7 @@ using System.Reflection;
 using DDD.DomainLayer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-
+#nullable disable
 namespace DDD.ApplicationLayer
 {
     public static class EventDIExtensions
