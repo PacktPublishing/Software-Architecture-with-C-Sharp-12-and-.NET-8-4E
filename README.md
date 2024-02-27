@@ -1,7 +1,7 @@
 # Software Architecture with C# 12 and .NET 8, Fourth Edition
 This is the code repository for [Software Architecture with C# 12 and .NET 8, Fourth Edition](https://www.packtpub.com/product/software-architecture-with-c-12-and-net-8-fourth-edition/9781805127659), published by Packt.
 
-**Build large language model (LLM) apps with Python, ChatGPT, and other LLMs**
+**Build enterprise applications using microservices, DevOps, EF Core, and design patterns for Azure**
 
 The authors of this book are -[Gabriel Baptista]() and [Francesco Abbruzzese]()
 ## About the book
