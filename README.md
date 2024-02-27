@@ -69,7 +69,7 @@ With the following software and hardware list you can run all code files present
 
 
 ## Know more on the Discord server <img alt="Coding" height="25" width="32"  src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif">
-You can get more engaged on the discord server for more latest updates and discussions in the community at [Discord](https://packt.link/lang)
+You can get more engaged on the discord server for more latest updates and discussions in the community at [Discord](https://packt.link/SoftwareArchitectureCSharp12Dotnet8)
 
 ## Download a free PDF <img alt="Coding" height="25" width="40" src="https://emergency.com.au/wp-content/uploads/2021/03/free.gif">
 
