@@ -88,3 +88,21 @@ _Francesco Abbruzzese_ dedicates his life to his two great passions: software an
 - [C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals - Eighth Edition](https://www.packtpub.com/product/c-12-and-net-8-modern-cross-platform-development-fundamentals-eighth-edition/9781837635870)
 - [Apps and Services with .NET 8 - Second Edition](https://www.packtpub.com/product/apps-and-services-with-net-8-second-edition/9781837637133)
 - [Architecting ASP.NET Core Applications - Third Edition](https://www.packtpub.com/product/architecting-aspnet-core-applications-third-edition/9781805123385)
+
+## Errata
+- Errata Page: 222, 223
+
+Errata Description :
+
+In the example code sections of class "MyTestsClass", the constructor should be "MyTestsClass" instead of "MyDatabaseTests".
+
+- Errata Page: 226
+
+Errata Description :
+
+In the example code sections of class "MyUnitTestClass", the constructor should be "UnitTest1" instead of "MyUnitTestClass".
+
+- Errata Page: 228
+
+Errata Description :
+Typo in the method submitButton.Clikck(); should be submitButton (".Click()")
