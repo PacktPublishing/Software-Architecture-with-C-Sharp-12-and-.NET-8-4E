@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace CodeMetricsGoodCode.Enums
 {
-    enum CreditCardProcessingResult
+    enum BillingMode
     {
-        ResultA = 'A',
-        ResultB = 'B',
-        ResultC = 'C',
-        ResultD = 'D',
-        ResultE = 'E',
-        ResultF = 'F',
-        ResultG = 'G',
-        Succeed = 'S'
+        Mode01 = 1,
+        Mode02,
+        Mode03,
+        Mode04,
+        Mode05,
+        Mode06,
+        Mode07,
+        Mode08,
     }
 }
