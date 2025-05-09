@@ -1,3 +1,6 @@
+
+<b><p align='center'>[![Packt Sale](https://static.packt-cdn.com/assets/images/humble+bundle/mega_bundle_dot_net_2.png)](https://www.humblebundle.com/books/c-and-net-mega-bundle-packt-books?view=tXxHRda-uIQk?utm_medium=affiliate)</p></b> 
+
 # Software Architecture with C# 12 and .NET 8, Fourth Edition
 This is the code repository for [Software Architecture with C# 12 and .NET 8, Fourth Edition](https://www.packtpub.com/product/software-architecture-with-c-12-and-net-8-fourth-edition/9781805127659), published by Packt.
 
