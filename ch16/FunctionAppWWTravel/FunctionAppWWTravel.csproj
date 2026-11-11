@@ -15,7 +15,7 @@
   <ItemGroup>
 	  <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
 	  <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
-	  <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.34" />
 	  <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.20.0" />
 	  <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.1.0" />
 	  <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Storage.Queues" Version="5.2.0" />
